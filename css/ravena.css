@@ -1,0 +1,145 @@
+.titleHeading {
+  font-size: 120%;
+  text-align: center;
+  margin: 0 5px;
+  color: #00a859;
+}
+
+.contributor-container {
+  padding-left: 25px;
+  padding-top: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.contributor-container {
+  padding-left: 25px;
+  padding-top: 25px;
+  max-width: 1400px;
+  margin: 0 auto
+}
+
+.contributor-container .contributor-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.credit-card {
+  margin: 4px;
+  position: relative;
+  border-radius: 6px;
+  padding: 10px;
+  background: #292d33;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .15s ease-in-out;
+}
+
+.credit-card__user {
+  flex: .9;
+  overflow: hidden
+}
+
+.credit-card__user h1 {
+  font-size: 1.1rem;
+  color: #00ffc3;
+  font-weight: 400;
+  -webkit-box-orient: vertical;
+  font-weight: 800
+}
+
+.credit-card__user h1,
+.credit-card__user h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.credit-card__user h2 {
+  width: 98%;
+  font-size: 14px;
+  color: #27dbb1;
+  font-weight: 700;
+  display: inline-block
+}
+
+.credit-card__avatar img {
+  height: 59px;
+  border-radius: 50%;
+  margin-right: 5px
+}
+
+.credit-card__avatar span {
+  z-index: 1;
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  display: block;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #2c2f33;
+  border-radius: 100%
+}
+
+
+.credit-card:hover {
+  transform: translateY(-6px);
+  z-index: 6;
+}
+
+@media only screen and (max-width:1111px) {
+  .contributor-container {
+    padding-top: 25px;
+    padding-left: 0;
+    max-width: 100%;
+    margin: 0 auto
+  }
+
+  .contributor-container h1.heading {
+    text-align: center
+  }
+
+  .contributor-container .contributor-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+  }
+
+  .credit-card {
+    width: 33vw;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .credit-card {
+    width: 60vw;
+  }
+}
+
+@media only screen and (max-width:600px) {
+
+  .contributor-container {
+    padding-top: 25px;
+    padding-left: 0;
+    max-width: 100%;
+    margin: 0 auto
+  }
+
+  .contributor-container h1.heading {
+    text-align: center
+  }
+
+  .contributor-container .contributor-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+  }
+}
+
+@media only screen and (max-width:524px) {
+  .credit-card {
+    width: 79vw;
+  }
+}

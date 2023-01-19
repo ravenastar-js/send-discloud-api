@@ -1,0 +1,168 @@
+.container {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 5px;
+}
+
+.pesquisarDesign {
+  background-color: #3d4044;
+  color: white;
+  padding: 8px 0 8px 5px;
+  margin-top: 12px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  border-radius: 6px 6px 6px 6px;
+  margin-bottom: 8px;
+  border: 1.5px solid #2c3034;
+}
+
+.pesquisarDesign:hover {
+  border: 1.5px solid #00a859;
+}
+
+.pesquisarDesign:focus {
+  border: 1.5px solid #00a859;
+}
+
+.apps {
+  float: left;
+  color: black;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.appsInfo {
+  background-color: #2c3034;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 95%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 17px;
+  border-radius: 3px 3px 3px 3px;
+  margin-top: 8px;
+}
+
+code {
+  color: #00a859;
+}
+
+.appsUsage {
+  text-align: left;
+  width: auto;
+  background-color: #14141c;
+  padding: 5px 10px 5px 10px;
+  border-radius: 7px;
+}
+
+.appsName {
+  margin: 14px;
+  color: #00a859;
+}
+
+.appsName:hover {
+  background-color: #2a2d30;
+}
+
+.active {
+  background-color: #212529;
+  border-radius: 6px 6px 0 0;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
+  border: 2px solid #00a859;
+}
+
+.appsInfo:hover {
+  background-color: #212529;
+  border: 2px solid #00a859;
+}
+
+.appsContent {
+  background-color: #212529;
+  padding: 0 5px;
+  width: 95%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-radius: 0 0 6px 6px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.vermelho {
+  text-decoration: none;
+  background-color: #ff574d;
+  margin: 2px;
+  padding: 2.5px 8px;
+  float: right;
+  border-radius: 5px;
+  color: #202225;
+  font-weight: 700;
+}
+
+a.vermelho:hover {
+  color: #212529;
+}
+
+.verde {
+  text-decoration: none;
+  background-color: #00a859;
+  margin: 2px;
+  padding: 2.5px 8px;
+  float: right;
+  border-radius: 5px;
+  color: #202225;
+  font-weight: 700;
+}
+
+a.verde:hover {
+  color: #212529;
+}
+
+
+@media screen and (max-width: 1050px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pesquisarDesign {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pesquisarDesign {
+    font-size: 16px;
+  }
+}
+
+
+.mb-5 {
+  margin-bottom: 1rem !important;
+}
+
+.row {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  margin-top: var(--bs-gutter-y);
+}
+
+.mt-3 {
+  margin-top: 2rem !important;
+}
+
+.me-2-2 {
+  margin-right: 0rem !important;
+  margin: 0px 0px 25px 0px;
+}

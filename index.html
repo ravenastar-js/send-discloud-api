@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Uma página simples, útil e intuitiva. Gerencie e envie sua aplicação diretamente para a DisCloud via API." />
+    <link rel="shortcut icon" href="https://i.imgur.com/zac1tfi.png" />
+    <meta name="theme-color" content="#00a859" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DisCloud API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- css -->
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/animation.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/apps.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ravena.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/plans.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/info.css"/>
+    <link href="assets/css/menu.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.min.css'><link rel="stylesheet" href="css/notify.css">
+  </head>
+
+<body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0" class="">
+  
+  <center>
+  <!-- ======= Menu ======= -->
+  <header id="header" >
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <img src="assets/img/discloudlogo.png" alt="" class="img-fluidtyped-cursor rounded-circle">
+        <h1 class="text-light"><a href="https://discloud.app">DisCloud</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://discloud.app" class="website"><i class="bi bi-globe"></i></a>
+          <a href="https://twitter.com/discloudbot" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.instagram.com/discloudbot/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        </div>
+      </div>
+      <!-- .nav-menu -->
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="https://docs.discloudbot.com"  target="_blank" class="nav-link scrollto"><i class="bi bi-book-fill"></i> <span>Documentação</span></a></li>
+          <li><a href="https://docs.discloudbot.com/suporte/doacoes"  target="_blank" class="nav-link scrollto"><i class="bi bi-cash-stack"></i> <span>Doação</span></a></li>
+          <li><a href="https://discloudbot.com/legal/terms" target="_blank" class="nav-link scrollto"><i class="bx">&#x2696;</i> <span>Termos de Serviço</span></a></li>
+          <li><a href="https://discloudbot.com/legal/policy" target="_blank" class="nav-link scrollto"><i class="bx">&#x2696;</i> <span>Política de Uso</span></a></li>
+        </ul>
+      </nav>
+      <!-- .nav-menu -->
+    </div>
+  </header>
+  <!-- End Menu -->
+
+  <!-- =======  button icon menu ======= -->
+  <i class="bi bi-list mobile-nav-toggle"></i>
+  <div class="topnav" id="myTopnav">
+  <a href="https://discloud.app" class="headerName">discloud.app</a>
+
+      <!-- START-WELCOME -->
+      <section >
+        <div class="col-sm-12">
+          <div class="alert fade alert-simple alert-info alert-dismissible
+            text-left font__family-montserrat font__size-16
+            font__weight-light brk-library-rendered rendered show"
+            role="alert" data-brk-library="component__alert">
+            <i class="start-icon fa fa-info-circle faa-shake animated"></i>
+            <strong class="font__weight-semibold"> WELCOME </strong> <i
+              class="start-icon fa fa-info-circle faa-shake animated"></i><BR>Uma página simples, útil e intuitiva. Gerencie e envie sua aplicação diretamente para a DisCloud via API.<br><br>
+            ➤ Página em desenvolvimento, porém já é funcional.<br>➤
+            Nenhuma informação fornecida nessa página é salva em banco de
+            dados ou cookies.<br>➤ Informações enviadas nessa página são
+            voláteis.
+          </div>
+        </section>
+        <!-- END-WELCOME -->
+
+        <div id="app">
+          <div class="row" >
+            <div class="col-12 text-center mt-3">
+
+              <!-- START-DISCLOUD-BUTTON -->
+              <a href="https://discloud.github.io/apidoc/" target="_blank"
+                class="discloud-api fas fa">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                &#9729; DISCLOUD API
+              </a>
+              <!-- END-DISCLOUD-BUTTON -->
+              <br/><br/>
+                  <h1 class="titleH2">
+                    {{ title }}
+                  </a>
+                  </h1>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 fs-5">
+                <form id="app-form">
+                  <hr class="my-5" />
+                    <div class="my-3">
+                      <label for="apiToken" class="me-apiToken form-label"><b>TOKEN DA API</b></label>
+                      <br/>
+                        <input
+                          type="password"
+                          placeholder="Token"
+                          class="teste"
+                          id="apiToken"
+                          v-model="apiToken"
+                          /><button type="reset" id="reset" class="btn
+                          btn-reset">&times;</button>
+                      </div >
+
+                    <hr  class="my-5" />
+                    <!-- START-CHECKLIST -->
+                    <h1 class="titleHeading" style="text-transform: uppercase;">CHECKLIST</h1>
+                    <ol>
+                      <li class=""><a href="https://docs.discloudbot.com/discloud.config/configurar" target="_blank" class="list">Coloque o <mark>discloud.config</mark> na raiz do seu projeto e não esqueça de incluir ao <mark>ZIP</mark></a></li>
+                      <li class=""><a href="https://docs.discloudbot.com/suporte/linguagens/javascript" target="_blank" class="list">JS &#10140; NÃO deve incluir <mark>node_modules</mark>, <mark>.git</mark>, <mark>.npm</mark> e <mark>package-lock.json</mark> ao <mark>ZIP</mark></a></li>
+                      <li class=""><a href="https://docs.discloudbot.com/suporte/linguagens/python" target="_blank" class="list">PY &#10140; NÃO deve incluir <mark>.git</mark> e <mark>venv</mark> ao <mark>ZIP</mark></a></li>
+                      <li class=""><a class="list">NÃO enviar <mark>ZIP</mark> maior que <mark>100MB</mark></a></li>
+                    </ol>
+                    <!-- END-CHECKLIST -->
+                    <br>
+
+                  </section>
+                      <label for="apiToken" class="me-2 form-label"><b>UPLOAD & COMMIT</b></label>
+                        <br/>
+                          <input type="file" class="form-control-sm" id="file"/>
+                          <div class=".mt-4v2">
+                            <label for="submit" class="me-2">{{ status }}</label>
+                            <br/>
+                              <button
+                                type="submit"
+                                id="submit"
+                                class="btn btn-get me-2"
+                                v-on:click="upload"
+                                :disabled="buttonActive">
+                                UPLOAD
+                              </button>
+                              <button
+                                type="submit"
+                                id="submit"
+                                class="btn btn-get me-2"
+                                v-on:click="commit"
+                                :disabled="buttonActive">
+                                COMMIT
+                              </button>
+                            </div>
+
+                          <hr class="my-5" />
+                          <section id="ac">
+                            <label for="apiToken" class="me-2 form-label"><b
+                                id="ac">AÇÕES</b></label>
+                            <div class=".mt-4v2">
+                              <button
+                                type="submit"
+                                id="submit"
+                                class="btn btn-success me-2"
+                                v-on:click="all"
+                                :disabled="buttonActive">
+                                LISTAR APLICAÇÕES
+                              </button>
+                              <button
+                                type="submit"
+                                id="submit"
+                                class="btn btn-get me-2"
+                                v-on:click="b"
+                                :disabled="buttonActive">
+                                BACKUP
+                              </button>
+                              <button
+                                type="submit"
+                                id="submit"
+                                class="btn btn-get me-2"
+                                v-on:click="logs"
+                                :disabled="buttonActive">
+                                LOGS
+                              </button>
+                              <button
+                                type="submit"
+                                id="submit"
+                                class="btn btn-get me-2"
+                                v-on:click="userInfo"
+                                :disabled="buttonActive">
+                                USER INFO
+                              </button>
+                              <br>
+                              <!-- START-LISTAPPS -->
+                              <div id="todosApps" onclick="fetchTodosApps()">
+                              </div>
+                              <div class="row">
+                                <div class="apps" id="apps">
+                              <!-- listar os apps -->
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- END-LISTAPPS -->
+                            <label class="me-2-2">{{ status2 }}</label> <br>
+                            <button
+                              type="submit"
+                              id="submit"
+                              class="btn btn-success me-2"
+                              v-on:click="start"
+                              :disabled="buttonActive">
+                              Iniciar
+                            </button>
+                            <button
+                              type="submit"
+                              id="submit"
+                              class="btn btn-put me-2"
+                              v-on:click="restart"
+                              :disabled="buttonActive">
+                              Reiniciar
+                            </button>
+                            <button
+                              type="submit"
+                              id="submit"
+                              class="btn btn-danger me-2"
+                              v-on:click="stop"
+                              :disabled="buttonActive">
+                              Parar
+                            </button>
+                            <br><br>
+                          </section>
+
+                          <hr class="my-5" />
+                          <div class=".mt-4v2 mb-5">
+
+                            <!-- START-WARNBOX-->
+                            <div class="alert fade alert-simple alert-warning
+                              alert-dismissible text-left
+                              font__family-montserrat
+                              font__size-16 font__weight-light
+                              brk-library-rendered
+                              rendered
+                              show" role="alert"
+                              data-brk-library="component__alert"><i
+                                class="start-icon fa fa-exclamation-triangle
+                                faa-flash
+                                animated"></i><strong
+                                class="font__weight-semibold">
+                                AVISO </strong><i class="start-icon fa
+                                fa-exclamation-triangle
+                                faa-flash
+                                animated"></i><br></strong>Faça o backup de sua
+                            aplicação antes de clicar em "REMOVER APP"
+                          </div>
+                          <!-- END-WARNBOX-->
+
+                          <div id="créditos" class=".mt-4v2 mb-5">
+                            <label for="submit" class="me-2">{{ status3 }}</label>
+                            <br/>
+                            <button
+                              type="submit"
+                              id="submit"
+                              class="btn btn-danger me-2"
+                              v-on:click="remove"
+                              :disabled="buttonActive">
+                              <b>REMOVER APP</b>
+                            </button>
+
+                            <br><br>
+                            <hr class="my-5" />
+                            <section class="contributors">
+                              <div>
+                                <div class="contributor-container">
+                                  <h1 class="titleHeading" style="text-transform: uppercase;">Customização da página feita por:</h1>
+                                  <br>
+                                  <div class="contributor-inner">
+                                    <div class="contributor-card">
+                                      <div class="credit-card" style="background:#410070">
+                                        <div class="credit-card__user">
+                                          <h1 title="RavenaStar">!RavenaStar#2615</h1>
+                                          <h2>
+                                            367893062812434432<br><br>
+                                            <a href="https://github.com/ravenastar-js" target="_blank"><img src="https://img.shields.io/badge/-ravenastar&#8208js-000000?style=flat-square&labelColor=000000&logo=Github&logoColor=white&link=https://github.com/SergioGlorias"/></a>ﾠ
+                                          </h2>
+                                        </div>
+                                        <div class="credit-card__avatar"></span>
+                                        <img src="https://images-ext-1.discordapp.net/external/OvaYT4U2oo95gpBFxSHXLED4ltAXvXOr8ONL4tw9O8k/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/367893062812434432/8c4258c83ec39b9d567b5bf2f373ee10.png?width=560&height=560" alt="User Avatar" draggable="false">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+
+                                <section class="contributors">
+                                  <div>
+                                    <div class="contributor-container">
+                                      <h1 class="titleHeading" style="text-transform: uppercase;">página original feita por:</h1>
+                                      <br>
+                                      <div class="contributor-inner">
+                                        <div class="contributor-card">
+                                          <div class="credit-card" style="background:#410070">
+                                            <div class="credit-card__user">
+                                              <h1 title="RavenaStar">Serginho#8818</h1>
+                                              <h2>
+                                                144943581965189120<br><br>
+                                                <a href="https://github.com/SergioGlorias" target="_blank"><img src="https://img.shields.io/badge/-SergioGlorias-000000?style=flat-square&labelColor=000000&logo=Github&logoColor=white&link=https://github.com/SergioGlorias"/></a>ﾠ
+                                                <a href="https://github.com/SergioGlorias/Discloud-on-Commit"><img src="https://img.shields.io/github/stars/sergioglorias/Discloud-on-Commit?color=ffc044&labelColor=000001&?style=flat-square&logo=github"></a>
+                                              </h2>
+                                            </div>
+                                            <div class="credit-card__avatar"></span>
+                                            <img src="https://avatars.githubusercontent.com/u/9739913?v=4" alt="User Avatar" draggable="false">
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </section>
+
+
+                                <section class="contributors">
+                                  <div>
+                                    <div class="contributor-container">
+                                      <h1 class="titleHeading" style="text-transform: uppercase;">CONTRIBUIDORES:</h1>
+                                      <br>
+                                      <div class="contributor-inner">
+                                        <div class="contributor-card">
+                                          <div class="credit-card" style="background:#410070">
+                                            <div class="credit-card__user">
+                                              <h1 title="RavenaStar">Maachado#6779</h1>
+                                              <h2>
+                                                687796246227845219<br><br>
+                                                <a href="https://github.com/lucasmch" target="_blank"><img src="https://img.shields.io/badge/-lucasmch-000000?style=flat-square&labelColor=000000&logo=Github&logoColor=white&link=https://github.com/lucasmch"/></a>ﾠ
+                                              </h2>
+                                            </div>
+                                            <div class="credit-card__avatar"></span>
+                                            <img src="https://avatars.githubusercontent.com/u/62573498?v=4" alt="User Avatar" draggable="false">
+                                          </div>
+                                        </div>
+
+                                        <div class="contributor-inner">
+                                          <div class="contributor-card">
+                                            <div class="credit-card" style="background:#410070">
+                                              <div class="credit-card__user">
+                                                <h1 title="RavenaStar">Astin#0943</h1>
+                                                <h2>
+                                                  693890684100280390<br><br>
+                                                  <a href="https://github.com/astindev" target="_blank"><img src="https://img.shields.io/badge/-astindev-000000?style=flat-square&labelColor=000000&logo=Github&logoColor=white&link=https://github.com/astindev"/></a>ﾠ
+                                                </h2>
+                                              </div>
+                                              <div class="credit-card__avatar"></span>
+                                              <img src="https://avatars.githubusercontent.com/u/52360869?v=4" alt="User Avatar" draggable="false">
+                                            </div>
+                                        </div>
+
+                                        <div class="contributor-inner">
+                                          <div class="contributor-card">
+                                            <div class="credit-card" style="background:#410070">
+                                              <div class="credit-card__user">
+                                                <h1 title="RavenaStar">Mizuno Ryuuji#5461</h1>
+                                                <h2>
+                                                  541033481199812628<br><br>
+                                                  <a href="https://github.com/lucasadsouza" target="_blank"><img src="https://img.shields.io/badge/-lucasadsouza-000000?style=flat-square&labelColor=000000&logo=Github&logoColor=white&link=https://github.com/lucasadsouza"/></a>ﾠ
+                                                </h2>
+                                              </div>
+                                              <div class="credit-card__avatar"></span>
+                                              <img src="https://avatars.githubusercontent.com/u/50783437?v=4" alt="User Avatar" draggable="false">
+                                            </div>
+                                        </div>
+                                        
+                                      </div>
+                                    </section>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </center>
+                  </body>
+   <!-- Scripts -->
+   <script src="https://unpkg.com/vue@next/dist/vue.global.prod.js" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   <script src="js/menu.js"></script>
+   <script src="js/pesquisar.js"></script>
+   <script src="js/main.js"></script>
+
+                </html>

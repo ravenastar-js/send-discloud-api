@@ -1,0 +1,142 @@
+.free {
+    background: linear-gradient(to bottom right, #d4d4d4 0%, #646464 100%);
+    color: #646464;
+}
+
+.carbon {
+    background: linear-gradient(to bottom right, #616161 0%, #192024 100%);
+    color: #192024;
+}
+
+.gold {
+    background: linear-gradient(to bottom right, #ffee70 0%, #ffc439 100%);
+    color: #ffc439;
+}
+
+.platinum {
+    background: linear-gradient(to bottom right, #79ffe3 0%, #15aa84 100%);
+    color: #2abc98;
+}
+
+.diamond {
+    background: linear-gradient(to bottom right, #2ab7ff 0%, #1867ab 100%);
+    color: #1867ab;
+}
+
+.ruby {
+    background: linear-gradient(to bottom right, #F48FB1 0%, #d81b60 100%);
+    color: #dc306f;
+}
+
+.sapphire {
+    background: linear-gradient(to bottom right, #fc9ad4 0%, #c71180 100%);
+    color: #c71180
+}
+
+.krypton {
+    background: linear-gradient(to bottom right, #89ff82 0%, #12a505 100%);
+    color: #12a505;
+}
+
+
+.img {
+    padding: 4px 1px 1px 1px;
+    width: 48px;
+}
+
+.imgv2 {
+    padding: 10px 0px 1px 1px;
+    width: 44px;
+}
+
+.imgv3 {
+    padding: 2px 1px 1px 1px;
+    width: 48px;
+}
+
+.badge {
+    position: relative;
+    margin: 1.5em;
+    width: 3em;
+    height: 4.8em;
+    border-radius: 8px;
+    display: inline-block;
+    top: 0;
+    transition: all 0.2s ease;
+}
+
+.main-wrapper {
+    float: left;
+    margin: -1px -31px -19px 41px;
+    text-align: center;
+}
+
+.badge:before {
+    transform: rotate(60deg);
+}
+
+.badge:before,
+.badge:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.badge:after {
+    transform: rotate(-60deg);
+}
+
+.badge:before,
+.badge:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.badge .ribbon {
+    position: absolute;
+    border-radius: 3px;
+    padding: 2px 5px 2px;
+    width: 81px;
+    z-index: 11;
+    color: #fff;
+    bottom: -4px;
+    left: 32px;
+    margin-left: -49px;
+    font-size: 14px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 27%);
+    text-shadow: 0 2px 2px rgb(0 0 0 / 10%);
+    text-transform: uppercase;
+    background: linear-gradient(to bottom right, #555 0%, #333 100%);
+    cursor: default;
+}
+
+.badge .circle {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    background: #fff;
+    z-index: 10;
+    border-radius: 50%;
+    top: 0;
+    left: -5px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
