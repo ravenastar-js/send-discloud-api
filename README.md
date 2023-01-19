@@ -4,4 +4,4 @@ Contribuições com website devem ser enviadas na branche COMUNIDADE em https://
 
 A versão COMUNIDADE será implementada em uma página exclusiva, como por exemplo: 
 - `staralienbot.com/send/discloud` ("versão padrão")
-- `staralienbot.com/c/send/discloud` ("versão comunidade)
+- `staralienbot.com/c/send/discloud` ("versão comunidade")
