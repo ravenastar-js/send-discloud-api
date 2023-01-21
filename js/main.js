@@ -50,8 +50,9 @@ Vue.createApp({
         .catch((error) => {
           this.buttonActive = false;
           if (error.code === "ERR_NETWORK") this.status = "Enviar anexo/zip inferior a 100MB."
-          else if (error.response) this.status = error.response;
-          else this.status = error;
+          else if(error.response.data.message === "Você não tem nenhum aplicativo.") this.status = "Você não tem nenhuma aplicação com ID informado."
+          else if(error.response.data) this.status = error.response.data.message
+          else this.status = error.response;
           alert(this.status);
         });
     },
@@ -69,6 +70,13 @@ Vue.createApp({
       }
 
       let botID = prompt("Insira o ID de sua aplicação");
+
+      if(botID === null){
+        this.buttonActive = false;
+        this.status = "【COMMIT】Operação cancelada.";
+        alert("【COMMIT】 Operação cancelada.");
+        return;
+      }
 
       if (!botID) {
         this.buttonActive = false;
@@ -102,8 +110,9 @@ Vue.createApp({
         .catch((error) => {
           this.buttonActive = false;
           if (error.code === "ERR_NETWORK") this.status = "Enviar anexo/zip inferior a 100MB."
-          else if (error.response) this.status = error.response;
-          else this.status = error;
+          else if(error.response.data.message === "Você não tem nenhum aplicativo.") this.status = "Você não tem nenhuma aplicação com ID informado."
+          else if(error.response.data) this.status = error.response.data.message
+          else this.status = error.response;
           alert(this.status);
         });
     },
@@ -119,6 +128,13 @@ Vue.createApp({
       }
 
       var botID = prompt("Insira o ID de sua aplicação");
+
+      if(botID === null){
+        this.buttonActive = false;
+        this.status2 = "【INICIAR】Operação cancelada.";
+        alert("【INICIAR】 Operação cancelada.");
+        return;
+      }
 
       if (!botID) {
         this.buttonActive = false;
@@ -147,9 +163,10 @@ Vue.createApp({
         })
         .catch((error) => {
           this.buttonActive = false;
-          if (error.response) this.status2 = error.response;
-          else this.status2 = error;
-          alert(this.status);
+          if(error.response.data.message === "Você não tem nenhum aplicativo.") this.status2 = "Você não tem nenhuma aplicação com ID informado."
+          else if(error.response.data) this.status2 = error.response.data.message
+          else this.status2 = error.response;
+          alert(this.status2);
         });
     },
     restart(e) {
@@ -164,6 +181,13 @@ Vue.createApp({
       }
 
       let botID = prompt("Insira o ID de sua aplicação");
+
+      if(botID === null){
+        this.buttonActive = false;
+        this.status2 = "【REINICIAR】Operação cancelada.";
+        alert("【REINICIAR】 Operação cancelada.");
+        return;
+      }
 
       if (!botID) {
         this.buttonActive = false;
@@ -192,9 +216,10 @@ Vue.createApp({
         })
         .catch((error) => {
           this.buttonActive = false;
-          if (error.response) this.status2 = error.response;
-          else this.status2 = error;
-          alert(this.status);
+          if(error.response.data.message === "Você não tem nenhum aplicativo.") this.status2 = "Você não tem nenhuma aplicação com ID informado."
+          else if(error.response.data) this.status2 = error.response.data.message
+          else this.status2 = error.response;
+          alert(this.status2);
         });
     },
     logs(e) {
@@ -210,12 +235,20 @@ Vue.createApp({
 
       let botID = prompt("Informe o ID da sua aplicação ou “all” (sem apas) para enviar os logs de todos os apps.");
 
+      if(botID === null){
+        this.buttonActive = false;
+        this.status2 = "【LOGS】Operação cancelada.";
+        alert("【LOGS】 Operação cancelada.");
+        return;
+      }
+
       if (!botID) {
         this.buttonActive = false;
         this.status2 = "Informe o ID da sua aplicação ou “all” (sem apas) para enviar os logs de todos os apps.";
         alert("Informe o ID da sua aplicação ou “all” (sem apas) para enviar os logs de todos os apps.");
         return;
       }
+  
 
       const config = {
         headers: {
@@ -300,9 +333,10 @@ Vue.createApp({
         })
         .catch((error) => {
           this.buttonActive = false;
-          if (error.response) this.status2 = error.response;
-          else this.status2 = error;
-          alert(this.status);
+          if(error.response.data.message === "Você não tem nenhum aplicativo.") this.status2 = "Você não tem nenhuma aplicação com ID informado."
+          else if(error.response.data) this.status2 = error.response.data.message
+          else this.status2 = error.response;
+          alert(this.status2);
         });
     },
 
@@ -318,6 +352,13 @@ Vue.createApp({
       }
 
       let botID = prompt("Informe o ID da sua aplicação ou “all” (sem apas) para fazer backup de todos os apps.");
+
+      if(botID === null){
+        this.buttonActive = false;
+        this.status2 = "【BACKUP】Operação cancelada.";
+        alert("【BACKUP】 Operação cancelada.");
+        return;
+      }
 
       if (!botID) {
         this.buttonActive = false;
@@ -407,9 +448,10 @@ Vue.createApp({
         })
         .catch((error) => {
           this.buttonActive = false;
-          if (error.response) this.status2 = error.response;
-          else this.status2 = error;
-          alert(this.status);
+          if(error.response.data.message === "Você não tem nenhum aplicativo.") this.status2 = "Você não tem nenhuma aplicação com ID informado."
+          else if(error.response.data) this.status2 = error.response.data.message
+          else this.status2 = error.response;
+          alert(this.status2);
         });
     },
     userInfo(e) {
@@ -437,7 +479,6 @@ Vue.createApp({
       axios.get(url, config)
         .then((response) => {
           this.buttonActive = false;
-
 
           let user = response.data.user
 
@@ -562,9 +603,10 @@ Vue.createApp({
         })
         .catch((error) => {
           this.buttonActive = false;
-          if (error.response) this.status2 = error.response;
-          else this.status2 = error;
-          alert(this.status);
+          if(error.response.data.message === "Você não tem nenhum aplicativo.") this.status2 = "Você não tem nenhuma aplicação com ID informado."
+          else if(error.response.data) this.status2 = error.response.data.message
+          else this.status2 = error.response;
+          alert(this.status2);
         });
     },
 
@@ -651,9 +693,10 @@ Vue.createApp({
         })
         .catch(() => {
           this.buttonActive = false;
-          if (error.response) this.status2 = error.response;
-          else this.status2 = error;
-          alert(this.status);
+          if(error.response.data.message === "Você não tem nenhum aplicativo.") this.status2 = "Você não tem nenhuma aplicação com ID informado."
+          else if(error.response.data) this.status2 = error.response.data.message
+          else this.status2 = error.response;
+          alert(this.status2);
         });
     },
     stop(e) {
@@ -668,6 +711,13 @@ Vue.createApp({
       }
 
       let botID = prompt("Insira o ID de sua aplicação");
+
+      if(botID === null){
+        this.buttonActive = false;
+        this.status2 = "【PARAR】Operação cancelada.";
+        alert("【PARAR】 Operação cancelada.");
+        return;
+      }
 
       if (!botID) {
         this.buttonActive = false;
@@ -693,14 +743,14 @@ Vue.createApp({
           this.status2 = response.data
           if (response.data.status === "ok" && response.data.message === "Seu aplicativo foi desligado.") this.status2 = "Sua aplicação foi desligada, não esqueça de clicar em “listar suas aplicações” para atualizar as informações das aplicações."
           if (response.data.status === "error" && response.data.message === "Seu aplicativo foi desligado.") this.status2 = "Sua aplicação já está desligada."
-
           alert(this.status2);
         })
         .catch((error) => {
           this.buttonActive = false;
-          if (error.response) this.status2 = error.response;
-          else this.status2 = error;
-          alert(this.status);
+          if(error.response.data.message === "Você não tem nenhum aplicativo.") this.status2 = "Você não tem nenhuma aplicação com ID informado."
+          else if(error.response.data) this.status2 = error.response.data.message
+          else this.status2 = error.response;
+          alert(this.status2);
         });
     },
     remove(e) {
@@ -715,6 +765,13 @@ Vue.createApp({
       }
 
       let botID = prompt("Insira o ID de sua aplicação");
+
+      if(botID === null){
+        this.buttonActive = false;
+        this.status2 = "【REMOVER APP】Operação cancelada.";
+        alert("【REMOVER APP】 Operação cancelada.");
+        return;
+      }
 
       if (!botID) {
         this.buttonActive = false;
@@ -743,9 +800,10 @@ Vue.createApp({
         })
         .catch((error) => {
           this.buttonActive = false;
-          if (error.response) this.status2 = error.response;
-          else this.status2 = error;
-          alert(this.status);
+          if(error.response.data.message === "Você não tem nenhum aplicativo.") this.status3 = "Você não tem nenhuma aplicação com ID informado."
+          else if(error.response.data) this.status3 = error.response.data.message
+          else this.status3 = error.response;
+          alert(this.status3);
         });
     },
   },
