@@ -292,7 +292,7 @@ Vue.createApp({
             let selectedApps = listaa;
             for (let i = 0; i < selectedApps.length; i++) {
 
-              var usageContent = (selectedApps[i].id === "") ? "" : (selectedApps[i].terminal.url === "") ? "" : `<div class="appsUsage"><code><a href="${selectedApps[i].terminal.url}" target="_blank">${selectedApps[i].terminal.url} </a></code></div>`
+              var usageContent =  selectedApps[i].terminal.url === null ? `<div class="appsUsage">Não foi possível gerar a URL dos logs, aqui estão os logs em texto:<br><code>${selectedApps[i].terminal.big.replaceAll("\n","<br>")}</code></div>` : `<div class="appsUsage"><code><a href="${selectedApps[i].terminal.url}" target="_blank">${selectedApps[i].terminal.url} </a></code></div>`
 
               content += `
               <div class="appsInfo" style="overflow-x: hidden;">
