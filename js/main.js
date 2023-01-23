@@ -74,7 +74,6 @@ Vue.createApp({
       if(botID === null){
         this.buttonActive = false;
         this.status = "【COMMIT】Operação cancelada.";
-        alert("【COMMIT】 Operação cancelada.");
         return;
       }
 
@@ -132,7 +131,6 @@ Vue.createApp({
       if(botID === null){
         this.buttonActive = false;
         this.status2 = "【INICIAR】Operação cancelada.";
-        alert("【INICIAR】 Operação cancelada.");
         return;
       }
 
@@ -185,7 +183,6 @@ Vue.createApp({
       if(botID === null){
         this.buttonActive = false;
         this.status2 = "【REINICIAR】Operação cancelada.";
-        alert("【REINICIAR】 Operação cancelada.");
         return;
       }
 
@@ -238,7 +235,6 @@ Vue.createApp({
       if(botID === null){
         this.buttonActive = false;
         this.status2 = "【LOGS】Operação cancelada.";
-        alert("【LOGS】 Operação cancelada.");
         return;
       }
 
@@ -356,7 +352,6 @@ Vue.createApp({
       if(botID === null){
         this.buttonActive = false;
         this.status2 = "【BACKUP】Operação cancelada.";
-        alert("【BACKUP】 Operação cancelada.");
         return;
       }
 
@@ -715,7 +710,6 @@ Vue.createApp({
       if(botID === null){
         this.buttonActive = false;
         this.status2 = "【PARAR】Operação cancelada.";
-        alert("【PARAR】 Operação cancelada.");
         return;
       }
 
@@ -769,7 +763,6 @@ Vue.createApp({
       if(botID === null){
         this.buttonActive = false;
         this.status2 = "【REMOVER APP】Operação cancelada.";
-        alert("【REMOVER APP】 Operação cancelada.");
         return;
       }
 
