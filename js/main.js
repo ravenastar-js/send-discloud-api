@@ -694,6 +694,98 @@ Vue.createApp({
           alert(this.status2);
         });
     },
+    appstatus(e) {
+      this.buttonActive = true;
+      e.preventDefault();
+
+      if (this.apiToken === "") {
+        this.buttonActive = false;
+        this.status2 = "Forneça o token da API";
+        alert("Forneça o token da API");
+        return;
+      }
+
+      const config = {
+        headers: {
+          "api-token": this.apiToken,
+        },
+      };
+
+      this.status2 = "Obtendo status das aplicações, aguarde...";
+
+      let url = `https://api.discloud.app/v2/app/all/status`;
+
+      axios.get(url, config)
+        .then((response) => {
+          this.buttonActive = false;
+
+          var a = response.data.apps.map(i => i)
+          async function fetchTodosApps() {
+
+            let todosBtn = document.getElementById('todosApps');
+
+            todosBtn.style.backgroundColor = "#76b5c5";
+            todosBtn.style.color = "#202225"
+
+            let cmdContainer = document.getElementById('apps');
+            var content = `<input type="text" class="pesquisarDesign" id="myInput" onkeyup="searchInput()"
+          placeholder="Pesquisar apps por nome ou ID 🔍" title="Digite o nome ou ID do app"><center>`
+            let selectedApps = a;
+            for (let i = 0; i < selectedApps.length; i++) {
+              var date = new Date(`${selectedApps[i].startedAt}`);
+              var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+              options.timeZone = 'UTC';
+              options.timeZoneName = 'short';
+  
+              var perms2 = selectedApps[i].container === "Online" ? ` <a class="verde">ON</a>` : ` <a class="vermelho">OFF</a>`;
+              var usageContent = `<div class="appsUsage"><code>【CPU】${selectedApps[i].cpu}<br>【RAM】${selectedApps[i].memory}<br>【SSD】${selectedApps[i].ssd}<br>【ÚLTIMA REINICIALIZAÇÃO】${selectedApps[i].last_restart}<br>【NETWORK】▼${selectedApps[i].netIO.down} ▲${selectedApps[i].netIO.up}<br>【INICIOU ÀS】 ${date.toLocaleDateString('pt-BR')}</code></div>`
+
+              content += `<div class="appsInfo" style="overflow-x: hidden;">
+        <code class="appsName" id="${selectedApps[i].id}_cmd" onclick="copyText(${selectedApps[i].id})">${selectedApps[i].id}</code>
+        <a>${perms2}</a>     
+     
+        </div>
+   
+        <div class="appsContent">
+          ${usageContent}
+        </div>
+        `
+            }
+
+            cmdContainer.innerHTML = content + `</center><br>`;
+
+            var coll = document.getElementsByClassName("appsInfo");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                  content.style.maxHeight = null;
+                  content.style.border = null
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                  content.style.border = "2px solid #00a859";
+                }
+              });
+            }
+
+          }
+
+          this.status2 = fetchTodosApps()
+          this.status2 = "Dados das aplicações entregue"
+          alert(this.status2);
+
+        })
+        .catch(() => {
+          this.buttonActive = false;
+          if(error.response.data.message === "Você não tem nenhum aplicativo.") this.status2 = "Você não tem nenhuma aplicação com ID informado."
+          else if(error.response.data) this.status2 = error.response.data.message
+          else this.status2 = error.response;
+          alert(this.status2);
+        });
+    },
     stop(e) {
       this.buttonActive = true;
       e.preventDefault();

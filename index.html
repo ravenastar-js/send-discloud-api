@@ -166,6 +166,14 @@
                                 LISTAR APLICAÇÕES
                               </button>
                               <button
+                              type="submit"
+                              id="submit"
+                              class="btn btn-success me-2"
+                              v-on:click="appstatus"
+                              :disabled="buttonActive">
+                              STATUS DAS APLICAÇÕES
+                            </button>
+                              <button
                                 type="submit"
                                 id="submit"
                                 class="btn btn-get me-2"
