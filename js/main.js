@@ -288,7 +288,7 @@ Vue.createApp({
             let selectedApps = listaa;
             for (let i = 0; i < selectedApps.length; i++) {
 
-              var usageContent =  `<div class="appsUsage"><code>${selectedApps[i].terminal.big.replaceAll("\n","<br>")}</code></div>`
+              var usageContent =  URL_LOGS.includes("https://")  ?  `<div class="appsUsage"><code><a href="${selectedApps[i].terminal.url}" target="_blank">${selectedApps[i].terminal.url} </a></code></div>` : `<div class="appsUsage"><br><code>${selectedApps[i].terminal.big.replaceAll("\n","<br>")}</code></div>`
 
               content += `
               <div class="appsInfo" style="overflow-x: hidden;">
