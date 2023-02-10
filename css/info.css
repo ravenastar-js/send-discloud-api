@@ -24,7 +24,7 @@ ol a {
 
 ol a:hover {
   color: #12041b;
-  background: #00a859;
+  background: #45be6c;
 }
 
 ol a:before {
@@ -35,7 +35,7 @@ ol a:before {
   left: -2.5em;
   top: 50%;
   margin-top: -1em;
-  background: #00a859;
+  background: #45be6c;
   height: 2em;
   width: 2em;
   line-height: 2em;
@@ -44,7 +44,7 @@ ol a:before {
 }
 
 a.list {
-  color: #00a859;
+  color: #45be6c;
   text-decoration: none;
 }
 
@@ -67,5 +67,5 @@ ol a:after {
 
 ol a:hover:after {
   left: -.5em;
-  border-left-color: #00a859;
+  border-left-color: #45be6c;
 }

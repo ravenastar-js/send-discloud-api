@@ -10,11 +10,11 @@
 
 body {
   background-color: #14141c;
-  color: #00a859;
+  color: #45be6c;
 }
 
 h1 {
-  color: #00a859;
+  color: #45be6c;
   font-family: Helvetica;
   font-style: normal;
   font-weight: bold;
@@ -22,7 +22,7 @@ h1 {
 }
 
 .titleH2 {
-  color: #00a859;
+  color: #45be6c;
   font-family: Helvetica;
   font-style: normal;
   font-weight: bold;
@@ -39,9 +39,9 @@ h1 {
 }
 
 .form-control-sm {
-  outline: 1px solid #00a859;
+  outline: 1px solid #45be6c;
   outline-offset: -4px;
-  border: 3px solid #00a859;
+  border: 3px solid #45be6c;
   background-color: #12041b;
 }
 
@@ -51,10 +51,10 @@ h1 {
 }
 
 input[type="file"]::file-selector-button {
-  border: 2px solid #00a859;
+  border: 2px solid #45be6c;
   padding: 0.2em 0.4em;
   border-radius: 0.2em;
-  background-color: #00a859;
+  background-color: #45be6c;
   transition: 1s;
 }
 
@@ -74,34 +74,34 @@ input[type="file"]::file-selector-button:hover {
 }
 
 ::placeholder {
-  color: #00a859;
+  color: #45be6c;
 }
 
 .text-center {
-  color: #00a859;
+  color: #45be6c;
 }
 
 .mt-2 {
-  color: #00a859;
+  color: #45be6c;
 }
 
 .form-control:hover {
-  border: 1px solid #00a859;
+  border: 1px solid #45be6c;
 }
 
 .teste {
   width: 100%;
-  border: 3px solid #00a859;
-  border-color: #00a859;
-  color: #00a859;
+  border: 3px solid #45be6c;
+  border-color: #45be6c;
+  color: #45be6c;
   background-color: #12041b;
   min-height: calc(1.5em + 0.5rem + 2px);
 
 }
 
 .teste::after {
-  color: #00a859;
-  border: 1px solid #00a859;
+  color: #45be6c;
+  border: 1px solid #45be6c;
   background-color: #12041b;
   padding: 0.25rem 5.5rem;
   min-height: calc(1.5em + 0.5rem + 2px);
@@ -156,18 +156,18 @@ input[type="file"]::file-selector-button:hover {
 .btn-success {
   margin: 4px;
   font-weight: 800;
-  border: 3px solid #00a859;
+  border: 3px solid #45be6c;
   color: #fff;
-  border-color: #00a859;
+  border-color: #45be6c;
 }
 
 .btn-success:hover {
   margin: 4px;
   font-weight: 800;
-  border: 3px solid #00a859;
+  border: 3px solid #45be6c;
   color: #18141c;
-  border-color: #00a859;
-  background-color: #00a859;
+  border-color: #45be6c;
+  background-color: #45be6c;
 }
 
 .btn-put {
@@ -227,7 +227,7 @@ p {
 
 .headerName:hover,
 .navdd:hover .navddbtn {
-  background-color: #00a859;
+  background-color: #45be6c;
   color: #14141c;
 }
 
@@ -256,7 +256,7 @@ strong {
 }
 
 .h33 {
-  color: #00a859;
+  color: #45be6c;
   font-family: Helvetica;
   font-style: normal;
   font-weight: bold;

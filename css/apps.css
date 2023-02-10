@@ -20,11 +20,11 @@
 }
 
 .pesquisarDesign:hover {
-  border: 1.5px solid #00a859;
+  border: 1.5px solid #45be6c;
 }
 
 .pesquisarDesign:focus {
-  border: 1.5px solid #00a859;
+  border: 1.5px solid #45be6c;
 }
 
 .apps {
@@ -49,7 +49,7 @@
 }
 
 code {
-  color: #00a859;
+  color: #45be6c;
 }
 
 .appsUsage {
@@ -62,7 +62,7 @@ code {
 
 .appsName {
   margin: 14px;
-  color: #00a859;
+  color: #45be6c;
 }
 
 .appsName:hover {
@@ -73,12 +73,12 @@ code {
   background-color: #212529;
   border-radius: 6px 6px 0 0;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
-  border: 2px solid #00a859;
+  border: 2px solid #45be6c;
 }
 
 .appsInfo:hover {
   background-color: #212529;
-  border: 2px solid #00a859;
+  border: 2px solid #45be6c;
 }
 
 .appsContent {
@@ -115,7 +115,7 @@ a.vermelho:hover {
 
 .verde {
   text-decoration: none;
-  background-color: #00a859;
+  background-color: #45be6c;
   margin: 2px;
   padding: 2.5px 8px;
   float: right;
