@@ -152,7 +152,8 @@
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  height: 4px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
