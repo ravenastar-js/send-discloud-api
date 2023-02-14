@@ -316,7 +316,7 @@ form input:placeholder-shown+button {
 }
 
 .rounded-circle {
-  background: #2c2f3f;
+  background: #0b0b0b;
 }
 
 @keyframes moveInBottom {
