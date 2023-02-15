@@ -1,6 +1,6 @@
 /* Specifies the size of the audio container */
 audio {
-    width: 145px;
+    width: 203px;
     height: 25px;
   }
   
@@ -11,9 +11,10 @@ audio {
   }
   
   /* Removes the timeline */
-  audio::-webkit-media-controls-timeline {
+  /*  audio::-webkit-media-controls-timeline {
     display: none !important;
   }
+  */
   
   /* Removes the time stamp */
   audio::-webkit-media-controls-current-time-display {
